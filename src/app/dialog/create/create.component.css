@@ -1,0 +1,25 @@
+form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.form-row {
+  display: flex;
+  width: fit-content;
+}
+
+.is-loading {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #673bb7;
+}
+
+i.status {
+  color: green;
+  font-size: 10em;
+  animation: rotateNscale 1s ease;
+}

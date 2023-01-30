@@ -1,0 +1,11 @@
+<app-awesome-bar (awesomeNavToggle)="awesomeNavToggle.toggle()" [style.zIndex]="2"></app-awesome-bar>
+<mat-sidenav-container [style.marginTop.px]="64">
+    <mat-sidenav class="mat-elevation-z2" #awesomeNavToggle mode="side" [opened]="openNav" align="start" fixedToGap="64">
+        <app-side-nav-drawer></app-side-nav-drawer>
+    </mat-sidenav>
+    <!-- Body -->
+    <!-- <mat-sidenav-content [ngClass]="{zIndex2: overlayContent}"> -->
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,11 @@
+<mat-toolbar color="primary" class="mat-elevation-z2 app__toolbar" *ngIf="isLoggedIn$ | async as authenticated">
+  <!-- <mat-icon *ngIf="canGoBack" (click)="goback()">arrow_back</mat-icon> -->
+  <mat-icon (click)="toggle()">menu</mat-icon>
+  <!-- <div> -->
+    <span style="text-transform: capitalize;">{{title}}</span>
+  <!-- </div> -->
+  <span class="example-spacer"></span>
+  <!-- <button mat-button *ngIf="authenticated" routerLink="devices">Healthy Devices</button>
+  <button mat-button *ngIf="authenticated" routerLink="rogues">Rogue Devices</button> -->
+  <button mat-button *ngIf="authenticated" routerLink="logout">Logout</button>
+</mat-toolbar>

@@ -1,0 +1,20 @@
+<div fxLayout="row" fxFlex="100%" fxFlexFill fxLayoutAlign="center center">
+  <div class="login__container mat-elevation-z4" fxLayout="row" fxLayoutAlign="space-evenly center">
+    <form fxLayout="column" [formGroup]="loginForm" novalidate fxFlex>
+        <h2 class="mat-display-1 rmv__margin">Lets Login</h2>
+      <!-- <h3 class="mat-h2" fxHide.gt-xs>Login</h3> -->
+      <mat-form-field>
+        <mat-icon class="input__prefix" matPrefix>face</mat-icon>
+        <input type="text" matInput formControlName="email" name="email" placeholder="Email" autocomplete="email">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-icon class="input__prefix" matPrefix>vpn_key</mat-icon>
+        <input type="password" matInput formControlName="password" name="password" placeholder="Password" autocomplete="current-password">
+      </mat-form-field>
+      <button mat-flat-button color="primary" class="login__btn" [disabled]="authenticating" (click)="flickNSwish()" aria-label="Submit Credentials for login">
+        Login
+      </button>
+      <a mat-button style="margin-top: 10px" href="reset-password">Forgot Password?</a>
+    </form>
+  </div>
+</div>

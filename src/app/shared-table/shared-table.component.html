@@ -1,0 +1,17 @@
+<table mat-table [dataSource]="tabularData" class="mat-elevation-z2">
+  <span class="colheaders" *ngFor="let item of dataKeys">
+    <ng-container [matColumnDef]="item.key">
+      <th mat-header-cell *matHeaderCellDef>{{item.title}}</th>
+      <td mat-cell *matCellDef="let element; let i = index" (click)="clickItem(i)">
+        <span *ngIf="item.kind==='button'">
+          <button mat-icon-button (click)="sendAction(i)" color="warn">
+            <mat-icon>{{item.icon}}</mat-icon></button>
+        </span>
+        <span *ngIf="!item.kind && item.key !== 'name'">{{returnVal(element, item.key)}}</span>
+        <span *ngIf="!item.kind && item.key === 'name'">{{returnVal(element, item.key)}}</span>
+      </td>
+    </ng-container>
+  </span>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; let i = index; columns: displayedColumns"></tr>
+</table>

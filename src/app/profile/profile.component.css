@@ -1,0 +1,25 @@
+.profile {
+  min-width: 50%;
+  width: 500px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-self: center;
+  margin: auto;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+  margin-top: 30px;
+}
+
+p.info {
+  border-bottom: 1px solid #dadada;
+  padding: 18px 30px;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.info span:first-child {
+  font-weight: 600;
+}

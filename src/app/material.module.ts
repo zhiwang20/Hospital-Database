@@ -1,0 +1,66 @@
+import { NgModule } from '@angular/core';
+
+import {
+  MatTableModule,
+  MatToolbarModule,
+  MatSortModule,
+  MatPaginatorModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatSidenavModule,
+  MatInputModule,
+  MatButtonModule,
+  MatIconModule,
+  MatSelectModule,
+  MatDividerModule,
+  MatListModule,
+  MatDialogModule,
+  MatProgressSpinnerModule,
+  MatSnackBarModule,
+  MatAutocompleteModule,
+  MatChipsModule,
+  MatExpansionModule,
+  MatStepperModule,
+  MatCheckboxModule,
+  MatTreeModule,
+  MatTooltipModule,
+  MatButtonToggleModule,
+  MatGridListModule,
+  MatRadioModule,
+} from '@angular/material';
+import { CdkTableModule } from '@angular/cdk/table';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
+@NgModule({
+  exports: [
+    CdkTableModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatSidenavModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSelectModule,
+    MatDividerModule,
+    MatListModule,
+    MatDialogModule,
+    MatProgressSpinnerModule,
+    MatSnackBarModule,
+    MatAutocompleteModule,
+    MatChipsModule,
+    MatExpansionModule,
+    MatStepperModule,
+    MatCheckboxModule,
+    MatTreeModule,
+    MatTooltipModule,
+    MatButtonToggleModule,
+    MatGridListModule,
+    MatRadioModule,
+    DragDropModule,
+  ]
+})
+export class MaterialModule { }

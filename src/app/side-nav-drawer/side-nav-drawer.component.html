@@ -1,0 +1,11 @@
+<nav class="muli_font">
+  <ul style="margin-top: 15px;">
+    <!-- <h3>Hospital</h3> -->
+    <li *ngFor="let navItem of navDeviceList">
+      <button mat-button routerLinkActive="active"
+        [routerLink]="navItem.link">{{navItem.label}}</button>
+    </li>
+  </ul>
+  <!--new below-->
+  <!-- uncommment out when debugged and ready for demoing-->
+</nav>

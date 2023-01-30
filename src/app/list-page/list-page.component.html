@@ -1,0 +1,21 @@
+<div class="app_view_container">
+  <mat-toolbar color="accent">
+      <span>{{pageName}} List</span>
+  </mat-toolbar>
+  <div class="schema_container">
+    <mat-spinner diameter="150" strokeWidth="6" *ngIf="!list.length && status.s ==='init'"></mat-spinner>
+    <div class="table-list" *ngIf="list.length">
+      <app-shared-table
+        [source]="list" (selected)="editSelected($event)"
+        [sourcekeys]="listKeys">
+        </app-shared-table>
+    </div>
+  </div>
+</div>
+
+<div class="floating">
+  <button mat-raised-button class="create" color="primary" (click)="createNew()">
+    <mat-icon>add</mat-icon>
+    Create New
+  </button>
+</div>

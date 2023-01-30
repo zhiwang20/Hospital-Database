@@ -1,0 +1,24 @@
+<h1 matDialogTitle>
+  Create {{title}}
+</h1>
+<mat-dialog-content>
+  <form [formGroup]="form" [class.hidden]="formStatus.state !== 'form'">
+    <div *ngFor="let item of formlist" class="form-row">
+      <app-dynamic-form-unit [question]="item" [form]="form"></app-dynamic-form-unit>
+    </div>
+  </form>
+  <div class="processing" *ngIf="formStatus.state === 'checking'">
+    <mat-spinner class="all__color" [strokeWidth]="5"></mat-spinner>
+  </div>
+  <div class="done" *ngIf="formStatus.state === 'done'">
+    <i class="material-icons status" [ngClass]="{'err': formStatus.err}">{{doneIcon}}</i>
+  </div>
+  <div class="final_msg mat-caption" *ngIf="formStatus.state !== 'form'" [ngClass]="{'margintop': formStatus.state === 'checking'}">
+    {{finalMsg}}
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button class="discard" color="accent" matDialogClose>Discard</button>
+  <span class="spacer"></span>
+  <button class="save" mat-button color="accent" [class.hidden]="formStatus.state !== 'form'" [disabled]="!form.valid" (click)="save()">Save</button>
+</mat-dialog-actions>

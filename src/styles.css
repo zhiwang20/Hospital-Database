@@ -1,0 +1,249 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html,
+body,
+app-root {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  flex: 1 1 100%;
+  flex-direction: column;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;;
+}
+
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.26);
+}
+
+.muli_font {
+  font-family: "Muli", sans-serif !important;
+}
+
+mat-sidenav {
+  min-width: 200px;
+  background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+.example-header {
+  position: absolute;
+  width: 100%;
+  background-color: #fafafa;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 999;
+}
+
+.example-header input {
+  font: inherit;
+  background: 0 0;
+  color: currentColor;
+  border: none;
+  outline: 0;
+  text-align: inherit;
+  -webkit-appearance: none;
+  background-color: #cacaca;
+  max-width: 500px;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  margin: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.hidden {
+  display: none !important;
+}
+/* mat progress circular */
+@keyframes colorChanger {
+  0% {
+    stroke: #42a5f5;
+  }
+  20% {
+    stroke: #f44336;
+  }
+  40% {
+    stroke: #fdd835;
+  }
+  60% {
+    stroke: #4caf50;
+  }
+  80% {
+    stroke: #3f51b5;
+  }
+  100% {
+    stroke: #42a5f5;
+  }
+}
+
+.all__color.mat-progress-spinner circle {
+  animation-duration: 5.25s, 4s !important;
+  animation-name: colorChanger, mat-progress-spinner-stroke-rotate-100 !important;
+  animation-iteration-count: infinite;
+  transition: none;
+}
+
+@keyframes rotateNscale {
+  0% {
+    transform: scale(0.1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+.processing, .done {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  overflow: hidden;
+}
+/* Icon Spinner */
+i.status {
+  color: green;
+  font-size: 10em;
+  animation: rotateNscale 1s ease;
+}
+
+.err {
+  color: #ce3c1b !important;
+}
+
+.cdk-overlay-pane.center_panel{
+  margin: auto !important;
+}
+
+.user_accordions .mat-expansion-panel-header-description {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.updateuser .mat-step-label {
+  font-size:12px;
+}
+
+.mat-paginator-clear-background{
+  background-color: transparent;
+}
+
+.location-expansion-header .mat-content{
+  align-items: center;
+  justify-content: space-between;
+  color:initial;
+}
+
+.mat-dialog-content.mediaInfo{
+  max-height:75vh;
+}
+
+.selectButtonCheckbox label div .mat-checkbox-frame{
+  color:white;
+  border-color: white;
+}
+
+.deleteButtonCheckbox label div .mat-checkbox-frame{
+  color:white;
+  border-color: white;
+}
+/* disable horizontal header clicks */
+.mat-horizontal-stepper-header, .mat-vertical-stepper-header {
+  pointer-events: none !important;
+}
+
+.red-tooltip{
+  color: red !important;
+  background-color: rgb(200,200,200);
+}
+
+
+.is-loading {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #673bb7;
+}
+
+.orgtype {
+  color: #fff;
+  font-size: 10px;
+  background-color: #188818;
+  padding: 2px 7px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  margin-left: 10px;
+}
+
+.playlist-table td.mat-cell {
+  max-width: 180px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.playlist-table th {
+  background-color: #efefef;
+}
+.playlist-table td:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.playlist-table th:not(:first-child):not(:last-child),
+.playlist-table td:not(:first-child):not(:last-child) {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+/* Disabled toggle */
+.mat-checkbox-disabled:not(.mat-checkbox-checked) .mat-checkbox-frame {
+  border-color: #b0b0b0;
+  border-style: dotted;
+}
+
+/* for ALL mat-ree-nodes*/
+.mat-tree-node{
+  border-bottom: 1px solid rgba(150,150,150,0.3);
+}
+/* for only organization selection mat-tree-nodes*/
+/* .mat-tree-node.orgNode{
+  border-bottom: 1px solid rgba(150,150,150,0.3);
+} */
+.mat-list-item.playList{
+  border-bottom: 1px solid rgba(160,160,160,0.5);
+}
+
+.final_msg {
+  text-align: center;
+}
+
+.orng-highlight {
+  color: rgb(255 106 0);
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  background-color: rgb(241 237 237 / 64%);
+  font-weight: 100;
+  font-size: 0.9em;
+  padding: 0px 5px;
+  font-family: 'Roboto';
+}
